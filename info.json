@@ -1,7 +1,9 @@
 {
     "realname": "Saúl Blanco Tejero",
     "username": "saul-bt",
+    "aliases": [ "saul-bt", "elGolpista" ],
     "birthdate": "1999-11-16",
+    "selfDescription": "Apasionado por la informática :)",
     "social": {
 	"GitHub": "https://github.com/saul-bt",
 	"CodePen": "https://lorem.es",

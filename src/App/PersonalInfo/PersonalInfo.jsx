@@ -14,8 +14,10 @@ const PersonalInfo = () => {
   return (
     <section className="personal-info">
       <h1>{info.realname.replace(/\s/g, '\n')}</h1>
-      <p>AKA: {info.username}</p>
-      <p>Age: {calculateAge(info.birthdate)}</p>
+      {info.aliases.length ?
+       <p>AKA: {info.aliases.join(', ')}</p> : ''}
+      <p>Edad: {calculateAge(info.birthdate)}</p>
+      <p>{info.selfDescription}</p>
     </section>
   )
 }
