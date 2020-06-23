@@ -1,0 +1,15 @@
+{
+    "realname": "Saúl Blanco Tejero",
+    "username": "saul-bt",
+    "birthdate": "1999-11-16",
+    "social": {
+	"GitHub": "https://github.com/saul-bt",
+	"CodePen": "https://lorem.es",
+	"CodeWars": "https://lorem.es",
+	"LinkedIn": "https://lorem.es"
+    },
+    "repoFilters": {
+	"fork": "false",
+	"archived": "false"
+    }
+}

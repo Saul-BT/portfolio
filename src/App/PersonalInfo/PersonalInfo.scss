@@ -1,0 +1,10 @@
+@import '../../../assets/main.scss';
+
+.personal-info {
+    h1 {
+	margin: 0;
+	font-family: var(--primary-font), monospace;
+	font-size: 5em;
+	white-space: pre;
+    }
+}
