@@ -12,7 +12,6 @@ const getFilteredRepos = repos => {
     repos = repos.filter(repo => {
       return repo[key] === Boolean(info.repoFilters[key])
     })
-    console.log(repos)
   })
   return repos
 }
@@ -21,9 +20,7 @@ const getFilteredRepos = repos => {
 const RepoGrid = () => {
   const [ repos, setRepos ] = useState([])
   
-  useEffect(() => {
-    setRepos(storedRepos)
-  }, [])
+  useEffect(() => setRepos(storedRepos), [])
   
   return (
     <div className="repo-grid">
@@ -31,9 +28,9 @@ const RepoGrid = () => {
 	.map(repo => (
 	  <RepoCard
 	    key={repo.name}
-	    url={`https://github.com/${username}/${repo.name}`}
+	    url={repo.url}
 	    title={repo.name}
-	    language={repo.language || 'null'}
+	    language={repo.language || 'unknown'}
 	    description={repo.description} />
       ))}
     </div>
