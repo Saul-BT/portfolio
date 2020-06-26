@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Social from './Social'
+
 import info from '../../../info.json'
 
 import './PersonalInfo.scss'
@@ -18,6 +20,7 @@ const PersonalInfo = () => {
        <p>AKA: {info.aliases.join(', ')}</p> : ''}
       <p>Edad: {calculateAge(info.birthdate)}</p>
       <p>{info.selfDescription}</p>
+      <Social links={info.social} />
     </section>
   )
 }
