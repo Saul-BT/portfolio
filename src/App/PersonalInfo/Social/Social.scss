@@ -1,31 +1,59 @@
+@use "sass:map";
 // TODO: Remove with Parcel2
 @import '../../../../assets/main.scss';
 
 :root {
     --key-elevation: 15px;
+
+    --key-padding-y: 15px; // Top and Bottom
+    --key-padding-x: 20px; // Left and Right
 }
 
-.key {
-    color: black;
-    margin: 10px;
-    padding: 15px 20px;
-    display: inline-block;
-    border: 5px solid black;
-    border-radius: 10px 10px 25px 25px;
+.social {
+    .key {
+	&:first-child {
+	    margin-left: 0;
+	}
 
-    text-decoration: none;
-    font-family: monospace;
-    font-size: 1.5em;
-    font-weight: bolder;
+	&:last-child {
+	    margin-right: 0;
+	}
+	
+	color: black;
+	margin: 10px;
+	padding: var(--key-padding-y) var(--key-padding-x);
+	display: inline-block;
+	border: 5px solid black;
+	border-radius: 10px 10px 25px 25px;
 
-    box-shadow: 0 var(--key-elevation) 0 -5px #CCC,
-		0 var(--key-elevation) 0 black;
+	line-height: 1;
+	text-decoration: none;
+	font-family: monospace;
+	font-size: 1.5em;
+	font-weight: bolder;
+
+	box-shadow: 0 var(--key-elevation) 0 -5px #CCC,
+		    0 var(--key-elevation) 0 black;
+
+	transition: .2s;
   
-    transition: .2s;
-  
-    &:active {
-	box-shadow: 0 5px 0 -5px #CCC,
-		    0 5px 0 black;
-	transform: translateY(15px)
+	&:active {
+	    box-shadow: 0 5px 0 -5px #CCC,
+			0 5px 0 black;
+	    transform: translateY(calc(var(--key-elevation) - 5px))
+	}
+    }
+}
+
+@media (max-width: map.get($breakpoints, "phone")) {
+    .social {
+	display: flex;
+	flex-flow: row no-wrap;
+
+	.key {
+	    flex: 1;
+	    padding: var(--key-padding-y) 0;
+	    text-align: center;
+	}
     }
 }

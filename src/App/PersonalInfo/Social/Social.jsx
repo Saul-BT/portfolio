@@ -5,8 +5,9 @@ import * as SocialIcons from '../../../../assets/icons'
 import './Social.scss'
 
 const Social = ({ links }) => {
+
   return (
-    <>
+    <section className="social">
       {Object.keys(links).map(key =>
 	<a key={key}
 	   href={links[key]}
@@ -16,7 +17,7 @@ const Social = ({ links }) => {
 	  <img src={SocialIcons[key] || SocialIcons['Other']} alt={key} />
 	</a>
       )}
-    </>
+    </section>
   )
 }
 
