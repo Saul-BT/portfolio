@@ -1,9 +1,10 @@
 .personal-info {
+    text-align: center;
     font-family: var(--primary-font), monospace;
 
     h1 {
-	margin: 0;
+	margin-top: 2rem;
+	margin-bottom: 0;
 	font-size: 4.5em;
-	white-space: pre;
     }
 }

@@ -7,13 +7,11 @@ import RepoGrid from './RepoGrid'
 import './App.scss'
 
 
-const App = () => {
-  return (
-    <>
-      <PersonalInfo />
-      <RepoGrid />
-    </>
-  )
-};
+const App = () => (
+  <>
+    <PersonalInfo />
+    <RepoGrid />
+  </>
+)
 
 export default App

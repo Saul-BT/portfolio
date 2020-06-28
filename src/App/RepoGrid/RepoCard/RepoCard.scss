@@ -15,11 +15,11 @@ $languageColors: (
     "JavaScript": #FCFBC2,
     "TypeScript": #C2DDFC,
     "Emacs-Lisp": #F0C2FC,
+    "unknown":    #FFFFFF,
 );
 
 .repo-card {
     position: relative;
-    height: 150px;
     color: black;
     background: repeating-linear-gradient(-45deg, transparent 0 5px, var(--stripe-color) 5px 10px);
     background-size: 200% 200%;

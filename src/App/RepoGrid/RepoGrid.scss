@@ -1,5 +1,12 @@
+@use "sass:map";
+@import '../../../assets/breakpoints.scss';
+
 .repo-grid {
     display: grid;
     gap: 3rem;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+    @media (max-width: map.get($breakpoints, "phone")) {
+	grid-template-columns: 100%;
+    }
 }

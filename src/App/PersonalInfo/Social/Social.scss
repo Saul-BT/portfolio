@@ -1,6 +1,7 @@
 @use "sass:map";
 // TODO: Remove with Parcel2
 @import '../../../../assets/main.scss';
+@import '../../../../assets/breakpoints.scss';
 
 :root {
     --key-elevation: 15px;
