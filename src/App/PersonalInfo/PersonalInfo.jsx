@@ -1,8 +1,5 @@
 import React from 'react'
-
 import Social from './Social'
-
-import info from '../../../info.json'
 
 import './PersonalInfo.scss'
 
@@ -13,11 +10,13 @@ const calculateAge = birthdate => {
   return Math.abs(ageDate.getUTCFullYear() - 1970)
 }
 
-const PersonalInfo = () => (
+const PersonalInfo = ({ info }) => (
   <section className="personal-info">
     <h1>{info.realname}</h1>
-    {info.aliases.length ?
-     <p>AKA: {info.aliases.join(', ')}</p> : ''}
+    {
+      info.aliases.length ?
+      <p>AKA: {info.aliases.join(', ')}</p> : ''
+    }
     <p>Edad: {calculateAge(info.birthdate)}</p>
     <p>{info.selfDescription}</p>
     <Social links={info.social} />
